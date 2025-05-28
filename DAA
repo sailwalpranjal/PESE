@@ -1,0 +1,841 @@
+Merge Sort
+#include <stdio.h>
+
+void merge(int a[], int l, int m, int r) {
+    int i = l, j = m+1, k = 0, t[100];
+    while (i <= m && j <= r) t[k++] = a[i] < a[j] ? a[i++] : a[j++];
+    while (i <= m) t[k++] = a[i++]; while (j <= r) t[k++] = a[j++];
+    for (i = l, k = 0; i <= r; a[i++] = t[k++]);
+}
+
+void merge_sort(int a[], int l, int r) {
+    if (l < r) {
+        int m = (l + r) / 2;
+        merge_sort(a, l, m); merge_sort(a, m + 1, r);
+        merge(a, l, m, r);
+    }
+}
+
+int main() {
+    int a[100], n;
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++) scanf("%d", &a[i]);
+    merge_sort(a, 0, n - 1);
+    for (int i = 0; i < n; i++) printf("%d ", a[i]);
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+Heap Sort
+#include <stdio.h>
+
+void heapify(int a[], int n, int i) {
+    int l = 2*i+1, r = 2*i+2, largest = i;
+    if (l < n && a[l] > a[largest]) largest = l;
+    if (r < n && a[r] > a[largest]) largest = r;
+    if (largest != i) {
+        int t = a[i]; a[i] = a[largest]; a[largest] = t;
+        heapify(a, n, largest);
+    }
+}
+
+void heap_sort(int a[], int n) {
+    for (int i = n/2-1; i >= 0; i--) heapify(a, n, i);
+    for (int i = n-1; i > 0; i--) {
+        int t = a[0]; a[0] = a[i]; a[i] = t;
+        heapify(a, i, 0);
+    }
+}
+
+int main() {
+    int a[100], n;
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++) scanf("%d", &a[i]);
+    heap_sort(a, n);
+    for (int i = 0; i < n; i++) printf("%d ", a[i]);
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+BFS
+
+#include <stdio.h>
+
+int q[100], front = 0, rear = 0;
+
+void enqueue(int x) { q[rear++] = x; }
+int dequeue() { return q[front++]; }
+int is_empty() { return front == rear; }
+
+void bfs(int g[10][10], int n, int start) {
+    int vis[10] = {0};
+    enqueue(start); vis[start] = 1;
+    while (!is_empty()) {
+        int u = dequeue();
+        printf("%d ", u);
+        for (int v = 0; v < n; v++)
+            if (g[u][v] && !vis[v]) enqueue(v), vis[v] = 1;
+    }
+}
+
+int main() {
+    int g[10][10], n, s;
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            scanf("%d", &g[i][j]);
+    scanf("%d", &s);
+    bfs(g, n, s);
+}
+
+---------------------------------------------------------------------------------------------------------------------------
+DFS
+#include <stdio.h>
+
+void dfs(int g[10][10], int vis[], int n, int u) {
+    vis[u] = 1;
+    printf("%d ", u);
+    for (int v = 0; v < n; v++)
+        if (g[u][v] && !vis[v])
+            dfs(g, vis, n, v);
+}
+
+int main() {
+    int g[10][10], vis[10] = {0}, n, s;
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            scanf("%d", &g[i][j]);
+    scanf("%d", &s);
+    dfs(g, vis, n, s);
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+Kruskal’s MST 
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct { int u, v, w; } Edge;
+Edge e[100];
+int p[100];
+
+int find(int x) { return p[x] < 0 ? x : (p[x] = find(p[x])); }
+
+int union_set(int a, int b) {
+    a = find(a); b = find(b);
+    if (a == b) return 0;
+    if (p[a] > p[b]) { int t = a; a = b; b = t; }
+    p[a] += p[b]; p[b] = a;
+    return 1;
+}
+
+int cmp(const void *a, const void *b) {
+    return ((Edge*)a)->w - ((Edge*)b)->w;
+}
+
+int main() {
+    int n, m, i, count = 0, cost = 0;
+    scanf("%d %d", &n, &m);
+    for (i = 0; i < m; i++) scanf("%d %d %d", &e[i].u, &e[i].v, &e[i].w);
+    for (i = 0; i < n; i++) p[i] = -1;
+    qsort(e, m, sizeof(Edge), cmp);
+    for (i = 0; i < m && count < n - 1; i++)
+        if (union_set(e[i].u, e[i].v)) {
+            cost += e[i].w;
+            count++;
+        }
+    printf("%d\n", cost);
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+Prim’s MST
+#include <stdio.h>
+#define INF 1e9
+
+int main() {
+    int n, g[10][10], vis[10] = {0}, cost = 0, edges = 0;
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++) 
+        for (int j = 0; j < n; j++)
+            scanf("%d", &g[i][j]);
+
+    vis[0] = 1;
+    while (edges < n - 1) {
+        int min = INF, u = -1, v = -1;
+        for (int i = 0; i < n; i++)
+            if (vis[i])
+                for (int j = 0; j < n; j++)
+                    if (!vis[j] && g[i][j] && g[i][j] < min)
+                        min = g[i][j], u = i, v = j;
+        vis[v] = 1; cost += min; edges++;
+    }
+    printf("%d\n", cost);
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+Dijkstra’s 
+ #include <stdio.h>
+#define INF 1e9
+
+void dijkstra(int g[10][10], int n, int src) {
+    int dist[10], vis[10] = {0};
+    for (int i = 0; i < n; i++) dist[i] = INF;
+    dist[src] = 0;
+
+    for (int count = 0; count < n - 1; count++) {
+        int u = -1, min = INF;
+        for (int i = 0; i < n; i++)
+            if (!vis[i] && dist[i] < min) min = dist[i], u = i;
+
+        vis[u] = 1;
+        for (int v = 0; v < n; v++)
+            if (g[u][v] && !vis[v] && dist[u] + g[u][v] < dist[v])
+                dist[v] = dist[u] + g[u][v];
+    }
+
+    for (int i = 0; i < n; i++)
+        printf("Dist to %d = %d\n", i, dist[i]);
+}
+
+int main() {
+    int g[10][10], n, src;
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            scanf("%d", &g[i][j]);
+    scanf("%d", &src);
+    dijkstra(g, n, src);
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+Bellman-Ford
+#include <stdio.h>
+#define INF 1000000000
+
+typedef struct { int u, v, w; } Edge;
+Edge e[100];
+
+int main() {
+    int n, m, src, d[100];
+    scanf("%d %d", &n, &m);
+    for (int i = 0; i < m; i++) scanf("%d %d %d", &e[i].u, &e[i].v, &e[i].w);
+    scanf("%d", &src);
+
+    for (int i = 0; i < n; i++) d[i] = INF;
+    d[src] = 0;
+
+    for (int i = 1; i < n; i++)
+        for (int j = 0; j < m; j++)
+            if (d[e[j].u] != INF && d[e[j].u] + e[j].w < d[e[j].v])
+                d[e[j].v] = d[e[j].u] + e[j].w;
+
+    for (int j = 0; j < m; j++)
+        if (d[e[j].u] != INF && d[e[j].u] + e[j].w < d[e[j].v]) {
+            printf("Negative cycle detected\n");
+            return 0;
+        }
+
+    for (int i = 0; i < n; i++)
+        printf("Dist to %d = %d\n", i, d[i]);
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+Floyd-Warshall 
+#include <stdio.h>
+#define INF 1000000000
+
+int main() {
+    int n, g[100][100];
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++) {
+            scanf("%d", &g[i][j]);
+            if (g[i][j] == -1) g[i][j] = INF;
+        }
+
+    for (int k = 0; k < n; k++)
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < n; j++)
+                if (g[i][k] + g[k][j] < g[i][j])
+                    g[i][j] = g[i][k] + g[k][j];
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++)
+            printf("%d ", g[i][j] == INF ? -1 : g[i][j]);
+        printf("\n");
+    }
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+Travelling Salesman Problem
+#include <stdio.h>
+#define INF 1000000000
+
+int n, g[20][20], dp[20][1<<16];
+
+int tsp(int pos, int mask) {
+    if (mask == (1<<n)-1) return g[pos][0] ? g[pos][0] : INF;
+    if (dp[pos][mask] != -1) return dp[pos][mask];
+    int res = INF;
+    for (int city = 0; city < n; city++)
+        if (!(mask & (1<<city)) && g[pos][city])
+            if (g[pos][city])
+                res = (res < g[pos][city] + tsp(city, mask | (1<<city))) 
+                      ? res : g[pos][city] + tsp(city, mask | (1<<city));
+    return dp[pos][mask] = res;
+}
+
+int main() {
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            scanf("%d", &g[i][j]);
+
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < (1<<n); j++)
+            dp[i][j] = -1;
+
+    int ans = tsp(0, 1);
+    printf("Minimum cost: %d\n", ans >= INF ? -1 : ans);
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+0/1 Knapsack
+#include <stdio.h>
+int w[100], v[100], dp[101][101], n;
+
+int max(int a, int b) { return a > b ? a : b; }
+
+int knapsack(int i, int cap) {
+    if (i == n || cap == 0) return 0;
+    if (dp[i][cap] != -1) return dp[i][cap];
+    if (w[i] > cap) return dp[i][cap] = knapsack(i+1, cap);
+    return dp[i][cap] = max(knapsack(i+1, cap), v[i] + knapsack(i+1, cap - w[i]));
+}
+
+int main() {
+    int W;
+    scanf("%d %d", &n, &W);
+    for (int i = 0; i < n; i++) scanf("%d %d", &w[i], &v[i]);
+    for (int i = 0; i <= n; i++) for (int j = 0; j <= W; j++) dp[i][j] = -1;
+    printf("Max value: %d\n", knapsack(0, W));
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+Fractional Knapsack
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct { int w, v; } Item;
+int cmp(const void *a, const void *b) {
+    Item *x = (Item*)a, *y = (Item*)b;
+    return (y->v * x->w) - (x->v * y->w); // compare by value/weight
+}
+
+int main() {
+    int n, W;
+    Item a[100];
+    double total = 0;
+    scanf("%d %d", &n, &W);
+    for (int i = 0; i < n; i++) scanf("%d %d", &a[i].w, &a[i].v);
+
+    qsort(a, n, sizeof(Item), cmp);
+    for (int i = 0; i < n && W > 0; i++) {
+        if (a[i].w <= W) {
+            total += a[i].v;
+            W -= a[i].w;
+        } else {
+            total += (double)a[i].v * W / a[i].w;
+            break;
+        }
+    }
+    printf("Max value: %.2f\n", total);
+}
+
+---------------------------------------------------------------------------------------------------------------------------
+Job Sequencing
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct { int id, dead, profit; } Job;
+
+int cmp(const void *a, const void *b) {
+    return ((Job*)b)->profit - ((Job*)a)->profit;
+}
+
+int main() {
+    int n, slot[100] = {0}, total = 0;
+    Job j[100];
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++)
+        scanf("%d %d %d", &j[i].id, &j[i].dead, &j[i].profit);
+
+    qsort(j, n, sizeof(Job), cmp);
+
+    for (int i = 0; i < n; i++) {
+        for (int t = j[i].dead - 1; t >= 0; t--)
+            if (!slot[t]) {
+                slot[t] = 1;
+                total += j[i].profit;
+                break;
+            }
+    }
+
+    printf("Max profit: %d\n", total);
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+Huffman coding
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Node {
+    char ch; int freq;
+    struct Node *l, *r;
+} Node;
+
+Node* newNode(char c, int f) {
+    Node *n = malloc(sizeof(Node));
+    n->ch = c; n->freq = f; n->l = n->r = NULL;
+    return n;
+}
+
+void swap(Node **a, Node **b) { Node *t = *a; *a = *b; *b = t; }
+
+void heapify(Node* h[], int n, int i) {
+    int s = i, l = 2*i+1, r = 2*i+2;
+    if (l < n && h[l]->freq < h[s]->freq) s = l;
+    if (r < n && h[r]->freq < h[s]->freq) s = r;
+    if (s != i) swap(&h[i], &h[s]), heapify(h, n, s);
+}
+
+Node* extractMin(Node* h[], int *n) {
+    Node *min = h[0];
+    h[0] = h[--(*n)];
+    heapify(h, *n, 0);
+    return min;
+}
+
+void insertHeap(Node* h[], Node* node, int *n) {
+    int i = (*n)++;
+    h[i] = node;
+    while (i && h[(i-1)/2]->freq > h[i]->freq)
+        swap(&h[i], &h[(i-1)/2]), i = (i-1)/2;
+}
+
+void printCodes(Node *r, char *code, int d) {
+    if (!r) return;
+    if (!r->l && !r->r) { code[d] = 0; printf("%c: %s\n", r->ch, code); return; }
+    code[d] = '0'; printCodes(r->l, code, d+1);
+    code[d] = '1'; printCodes(r->r, code, d+1);
+}
+
+int main() {
+    int n; scanf("%d", &n);
+    Node* h[100]; char c; int f;
+    for (int i = 0; i < n; i++) scanf(" %c %d", &c, &f), h[i] = newNode(c, f);
+    for (int i = n/2-1; i >= 0; i--) heapify(h, n, i);
+    while (n > 1) {
+        Node *a = extractMin(h, &n), *b = extractMin(h, &n);
+        Node *m = newNode('$', a->freq + b->freq);
+        m->l = a; m->r = b;
+        insertHeap(h, m, &n);
+    }
+    char code[100];
+    printCodes(h[0], code, 0);
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+Linear Search
+#include <stdio.h>
+int main() {
+    int n, k, i, arr[100];
+    scanf("%d%d", &n, &k);
+    for(i=0;i<n;i++) scanf("%d",&arr[i]);
+    for(i=0;i<n;i++) if(arr[i]==k) {printf("%d\n", i); return 0;}
+    printf("-1\n");
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+Binary Search
+#include <stdio.h>
+int main() {
+    int n,k,l=0,r,m;
+    int arr[100];
+    scanf("%d%d",&n,&k);
+    for(int i=0;i<n;i++) scanf("%d",&arr[i]);
+    r=n-1;
+    while(l<=r){
+        m=l+(r-l)/2;
+        if(arr[m]==k) {printf("%d\n",m);return 0;}
+        else if(arr[m]<k) l=m+1;
+        else r=m-1;
+    }
+    printf("-1\n");
+}
+
+---------------------------------------------------------------------------------------------------------------------------
+Sortings
+#include <stdio.h>
+
+// Bubble Sort
+void bubbleSort(int *a,int n){
+    for(int i=0;i<n-1;i++) for(int j=0;j<n-1-i;j++) if(a[j]>a[j+1]){
+        int t=a[j]; a[j]=a[j+1]; a[j+1]=t;
+    }
+}
+// -----------
+
+// Selection Sort
+void selectionSort(int *a,int n){
+    for(int i=0;i<n-1;i++){
+        int m=i;
+        for(int j=i+1;j<n;j++) if(a[j]<a[m]) m=j;
+        if(m!=i){ int t=a[i]; a[i]=a[m]; a[m]=t; }
+    }
+}
+// -----------
+
+// Insertion Sort
+void insertionSort(int *a,int n){
+    for(int i=1;i<n;i++){
+        int k=a[i], j=i-1;
+        while(j>=0 && a[j]>k) a[j+1]=a[j--];
+        a[j+1]=k;
+    }
+}
+// -----------
+
+// Quick Sort
+int partition(int *a,int l,int r){
+    int p=a[r], i=l-1, t;
+    for(int j=l;j<r;j++) if(a[j]<=p) t=a[++i], a[i]=a[j], a[j]=t;
+    t=a[i+1]; a[i+1]=a[r]; a[r]=t;
+    return i+1;
+}
+void quickSort(int *a,int l,int r){
+    if(l<r){
+        int pi=partition(a,l,r);
+        quickSort(a,l,pi-1);
+        quickSort(a,pi+1,r);
+    }
+}
+// -----------
+
+// Counting Sort (non-negative)
+void countingSort(int *a,int n){
+    int max=0;
+    for(int i=0;i<n;i++) if(a[i]>max) max=a[i];
+    int c[max+1];
+    for(int i=0;i<=max;i++) c[i]=0;
+    for(int i=0;i<n;i++) c[a[i]]++;
+    for(int i=1;i<=max;i++) c[i]+=c[i-1];
+    int o[n];
+    for(int i=n-1;i>=0;i--) o[--c[a[i]]]=a[i];
+    for(int i=0;i<n;i++) a[i]=o[i];
+}
+// -----------
+
+// Radix Sort helpers
+int maxVal(int *a,int n){
+    int mx=a[0];
+    for(int i=1;i<n;i++) if(a[i]>mx) mx=a[i];
+    return mx;
+}
+void countSortForRadix(int *a,int n,int exp){
+    int c[10]={0}, o[n];
+    for(int i=0;i<n;i++) c[(a[i]/exp)%10]++;
+    for(int i=1;i<10;i++) c[i]+=c[i-1];
+    for(int i=n-1;i>=0;i--) o[--c[(a[i]/exp)%10]]=a[i];
+    for(int i=0;i<n;i++) a[i]=o[i];
+}
+void radixSort(int *a,int n){
+    for(int exp=1, m=maxVal(a,n); m/exp>0; exp*=10)
+        countSortForRadix(a,n,exp);
+}
+// -----------
+
+// Shell Sort
+void shellSort(int *a,int n){
+    for(int gap=n/2;gap>0;gap/=2)
+        for(int i=gap;i<n;i++){
+            int t=a[i], j=i;
+            for(; j>=gap && a[j-gap]>t; j-=gap) a[j]=a[j-gap];
+            a[j]=t;
+        }
+}
+// -----------
+
+int main(){
+    int a[100], n;
+    scanf("%d",&n);
+    for(int i=0;i<n;i++) scanf("%d",&a[i]);
+
+    // Uncomment the one to test
+    // bubbleSort(a,n);
+    // selectionSort(a,n);
+    // insertionSort(a,n);
+    // quickSort(a,0,n-1);
+    // countingSort(a,n);
+    // radixSort(a,n);
+    // shellSort(a,n);
+
+    for(int i=0;i<n;i++) printf("%d ",a[i]);
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+detects cycles both in undirected and directed graphs
+#include <stdio.h>
+#include <stdbool.h>
+
+bool dfs(int g[100][100], int u, int n, int vis[], int rec[], int parent, bool directed) {
+    vis[u] = 1;
+    rec[u] = 1;
+    for(int v=0; v<n; v++) {
+        if(g[u][v]) {
+            if(!vis[v]) {
+                if(dfs(g,v,n,vis,rec,u,directed)) return true;
+            } else {
+                if(directed && rec[v]) return true;      // directed cycle (back edge)
+                if(!directed && v != parent) return true; // undirected cycle (visited & not parent)
+            }
+        }
+    }
+    rec[u] = 0;
+    return false;
+}
+
+bool hasCycle(int g[100][100], int n, bool directed) {
+    int vis[100]={0}, rec[100]={0};
+    for(int i=0; i<n; i++)
+        if(!vis[i] && dfs(g,i,n,vis,rec,-1,directed))
+            return true;
+    return false;
+}
+
+int main() {
+    int n, mode;
+    scanf("%d %d", &n, &mode); // mode=0 undirected, mode=1 directed
+    int g[100][100]={0};
+    for(int i=0; i<n; i++)
+        for(int j=0; j<n; j++)
+            scanf("%d", &g[i][j]);
+
+    puts(hasCycle(g,n,mode) ? "Cycle detected" : "No cycle");
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+Longest Common Subsequence (LCS)
+#include <stdio.h>
+#include <string.h>
+
+int max(int a,int b){ return a>b?a:b; }
+
+int lcs(char *X, char *Y, int m, int n){
+    int L[m+1][n+1];
+    for(int i=0; i<=m; i++)
+        for(int j=0; j<=n; j++)
+            if(i==0 || j==0) L[i][j]=0;
+            else if(X[i-1]==Y[j-1]) L[i][j]=1+L[i-1][j-1];
+            else L[i][j]=max(L[i-1][j], L[i][j-1]);
+    return L[m][n];
+}
+
+int main(){
+    char X[100], Y[100];
+    scanf("%s %s", X, Y);
+    printf("%d\n", lcs(X, Y, strlen(X), strlen(Y)));
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+ Longest Increasing Subsequence (LIS)
+#include <stdio.h>
+
+int max(int a,int b){ return a>b?a:b; }
+
+int lis(int a[], int n){
+    int L[n];
+    for(int i=0;i<n;i++) L[i]=1;
+    for(int i=1;i<n;i++)
+        for(int j=0;j<i;j++)
+            if(a[i]>a[j] && L[i]<L[j]+1)
+                L[i]=L[j]+1;
+    int res=0;
+    for(int i=0;i<n;i++) if(L[i]>res) res=L[i];
+    return res;
+}
+
+int main(){
+    int n, a[100];
+    scanf("%d", &n);
+    for(int i=0;i<n;i++) scanf("%d", &a[i]);
+    printf("%d\n", lis(a,n));
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+Naive String Matching
+#include <stdio.h>
+#include <string.h>
+
+void naive(char *t,char *p){
+    int n=strlen(t),m=strlen(p);
+    for(int i=0;i<=n-m;i++){
+        int j=0; for(;j<m&&t[i+j]==p[j];j++);
+        if(j==m) printf("Found at %d\n",i);
+    }
+}
+
+int main(){
+    char t[1000],p[100]; scanf("%s %s",t,p);
+    naive(t,p);
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+Rabin-Karp
+#include <stdio.h>
+#include <string.h>
+
+#define d 256
+#define q 101
+
+void rk(char *t,char *p){
+    int n=strlen(t),m=strlen(p),h=1,p_h=0,t_h=0;
+    for(int i=0;i<m-1;i++) h=(h*d)%q;
+    for(int i=0;i<m;i++) p_h=(d*p_h+p[i])%q, t_h=(d*t_h+t[i])%q;
+    for(int i=0;i<=n-m;i++){
+        if(p_h==t_h){
+            int j=0; for(;j<m&&t[i+j]==p[j];j++);
+            if(j==m) printf("Found at %d\n",i);
+        }
+        if(i<n-m){
+            t_h=(d*(t_h - t[i]*h) + t[i+m])%q;
+            if(t_h<0) t_h+=q;
+        }
+    }
+}
+
+int main(){
+    char t[1000],p[100]; scanf("%s %s",t,p);
+    rk(t,p);
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+KMP Algorithm
+#include <stdio.h>
+#include <string.h>
+
+void compLPS(char *p,int m,int *lps){
+    int len=0,i=1; lps[0]=0;
+    while(i<m){
+        if(p[i]==p[len]) lps[i++]=++len;
+        else if(len) len=lps[len-1];
+        else lps[i++]=0;
+    }
+}
+
+void kmp(char *t,char *p){
+    int n=strlen(t),m=strlen(p),lps[m],i=0,j=0;
+    compLPS(p,m,lps);
+    while(i<n){
+        if(p[j]==t[i]) i++,j++;
+        if(j==m){ printf("Found at %d\n",i-j); j=lps[j-1]; }
+        else if(i<n && p[j]!=t[i]) j? j=lps[j-1]: i++;
+    }
+}
+
+int main(){
+    char t[1000],p[100]; scanf("%s %s",t,p);
+    kmp(t,p);
+}
+
+---------------------------------------------------------------------------------------------------------------------------
+Tower of Hanoi
+#include <stdio.h>
+
+void toh(int n,char f,char t,char a){
+    if(n) {
+        toh(n-1,f,a,t);
+        printf("Move disk %d from %c to %c\n",n,f,t);
+        toh(n-1,a,t,f);
+    }
+}
+
+int main(){
+    int n; scanf("%d",&n);
+    toh(n,'A','C','B');
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+Fibonacci
+(recursion)
+#include <stdio.h>
+
+int fib(int n){
+    return n<=1 ? n : fib(n-1) + fib(n-2);
+}
+
+int main(){
+    int n; scanf("%d",&n);
+    printf("%d\n", fib(n));
+}
+
+(iterative)
+#include <stdio.h>
+
+int fib(int n){
+    if(n<=1) return n;
+    int a=0,b=1,c;
+    for(int i=2;i<=n;i++){
+        c=a+b; a=b; b=c;
+    }
+    return b;
+}
+
+int main(){
+    int n; scanf("%d",&n);
+    printf("%d\n", fib(n));
+}
+
+---------------------------------------------------------------------------------------------------------------------------
+Matrix chain multiplication
+#include <stdio.h>
+#define INF 1<<30
+
+int mcm(int p[],int n){
+    int m[n][n];
+    for(int i=1;i<n;i++) m[i][i]=0;
+    for(int l=2;l<n;l++)
+        for(int i=1;i<=n-l;i++){
+            int j=i+l-1,mn=INF;
+            for(int k=i;k<j;k++){
+                int c=m[i][k]+m[k+1][j]+p[i-1]*p[k]*p[j];
+                if(c<mn) mn=c;
+            }
+            m[i][j]=mn;
+        }
+    return m[1][n-1];
+}
+
+int main(){
+    int n,p[100];
+    scanf("%d",&n);
+    for(int i=0;i<=n;i++) scanf("%d",&p[i]);
+    printf("%d\n",mcm(p,n+1));
+}
