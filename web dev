@@ -1,0 +1,1865 @@
+Pranjal, [17-06-2025 23:42]
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<style> 
+    table,td,tr,th { 
+        border: 1px solid black; 
+    } 
+    th { 
+        text-align: center; 
+    } 
+</style> 
+<body> 
+    <table> 
+        <tr> 
+            <th rowspan="2">Sr. No.</th> 
+            <th rowspan="2">Course</th> 
+            <th rowspan="2">Subject</th> 
+            <th colspan="2">Marks</th> 
+            <th colspan="2">Category</th> 
+            <th rowspan="2">Pratical/Theory</th> 
+        </tr> 
+        <tr> 
+            <th>Internal</th> 
+            <th>External</th> 
+            <th>Internal</th> 
+            <th>External</th> 
+        </tr> 
+        <tr> 
+            <td rowspan="4">1</td> 
+            <td rowspan="4">MBA</td> 
+            <td>Managment Accounting</td> 
+            <td>30</td> 
+            <td>70</td> 
+            <td>-</td> 
+            <td><b>✓</b></td> 
+            <td>Theory</td> 
+        </tr> 
+        <tr> 
+            <td>Information Technology</td> 
+            <td>30</td> 
+            <td>70</td> 
+            <td>-</td> 
+            <td><b>✓</b></td> 
+            <td>T and P</td> 
+        </tr> 
+        <tr> 
+            <td>Basics of Marketing</td> 
+            <td>30</td> 
+            <td>70</td> 
+            <td>-</td> 
+            <td><b>✓</b></td> 
+            <td>Theory</td> 
+        </tr> 
+        <tr> 
+            <td>E-Commerce</td> 
+            <td>50</td> 
+            <td>-</td> 
+            <td><b>✓</b></td> 
+            <td>-</td> 
+            <td>Theory</td> 
+        </tr> 
+        <tr> 
+            <td rowspan="6">2</td> 
+            <td rowspan="6">MCM</td> 
+            <td>Visual Basic</td> 
+            <td>30</td> 
+            <td>70</td> 
+            <td>-</td> 
+            <td><b>✓</b></td> 
+            <td>T and P</td> 
+        </tr> 
+        <tr> 
+            <td>Internet Technology</td> 
+            <td>30</td> 
+            <td>70</td> 
+            <td>-</td> 
+            <td><b>✓</b></td> 
+            <td>T and P</td> 
+        </tr> 
+        <tr> 
+            <td>Network Technology</td> 
+            <td>30</td> 
+            <td>70</td> 
+            <td>-</td> 
+            <td><b>✓</b></td> 
+            <td>Theory</td> 
+        </tr> 
+        <tr> 
+            <td>VB.Net</td> 
+            <td>30</td> 
+            <td>70</td> 
+            <td>-</td> 
+            <td><b>✓</b></td> 
+            <td>T and P</td> 
+        </tr> 
+        <tr> 
+            <td>Linux</td> 
+            <td>30</td> 
+            <td>70</td> 
+            <td>-</td> 
+            <td><b>✓</b></td> 
+            <td>T and P</td> 
+        </tr> 
+        <tr> 
+            <td>ISA</td> 
+            <td>50</td> 
+            <td>-</td> 
+            <td><b>✓</b></td> 
+            <td>-</td> 
+            <td>Theory</td> 
+        </tr> 
+    </table> 
+</body> 
+</html>
+
+Pranjal, [17-06-2025 23:44]
+
+
+Pranjal, [17-06-2025 23:44]
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Table with Images</title>  
+    <style>  
+        img{  
+            height:200px;  
+        }  
+        table,td,tr{  
+            border: 5px solid rgba(0, 0, 0, 0.348);  
+        }  
+    </style>  
+</head>  
+<body>  
+    <table>  
+        <tr>  
+            <td><a href="https://www.vodafone.com/"><img 
+src="https://images.indianexpress.com/2019/11/vodafone-759-1-1.jpg"></a></td>  
+            <td><a href="https://www.tata.com/business/tata-teleservices"><img 
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/1200px
+Tata_logo.svg.png"></a></td>  
+            <td><a href="https://www.airtel.in/"><img 
+src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Bharti_Airtel_Logo.svg"></a>
+ </td>  
+            <td><a href="https://www.docomo.ne.jp/english/"><img 
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Tata_Docomo_Logo.svg/1
+ 200px-Tata_Docomo_Logo.svg.png"></a></td>  
+        </tr>  
+        <tr> 
+            <td><a href="https://www.vodafone.com/"><img 
+src="https://images.indianexpress.com/2019/11/vodafone-759-1-1.jpg"></a></td>  
+            <td colspan="2" style="text-align: center; font-size: 30px;">Table With 
+Images</td>  
+            <td><a href="https://www.docomo.ne.jp/english/"><img 
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Tata_Docomo_Logo.svg/1
+ 200px-Tata_Docomo_Logo.svg.png"></a></td>  
+              
+</tr>  
+<tr>  
+<td><a href="https://www.vodafone.com/"><img 
+src="https://images.indianexpress.com/2019/11/vodafone-759-1-1.jpg"></a></td>  
+<td><a href="https://www.tata.com/business/tata-teleservices"><img 
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/1200px
+Tata_logo.svg.png"></a></td>  
+<td><a href="https://www.airtel.in/"><img 
+src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Bharti_Airtel_Logo.svg"></a>
+ </td>  
+<td><a href="https://www.docomo.ne.jp/english/"><img 
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Tata_Docomo_Logo.svg/1
+ 200px-Tata_Docomo_Logo.svg.png"></a></td>  
+</tr>  
+</table>  
+</body>  
+</html><!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Table with Images</title>  
+    <style>  
+        img{  
+            height:200px;  
+        }  
+        table,td,tr{  
+            border: 5px solid rgba(0, 0, 0, 0.348);  
+        }  
+    </style>  
+</head>  
+<body>  
+    <table>  
+        <tr>  
+            <td><a href="https://www.vodafone.com/"><img 
+src="https://images.indianexpress.com/2019/11/vodafone-759-1-1.jpg"></a></td>  
+            <td><a href="https://www.tata.com/business/tata-teleservices"><img 
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/1200px
+Tata_logo.svg.png"></a></td>  
+            <td><a href="https://www.airtel.in/"><img 
+src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Bharti_Airtel_Logo.svg"></a>
+ </td>  
+            <td><a href="https://www.docomo.ne.jp/english/"><img 
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Tata_Docomo_Logo.svg/1
+ 200px-Tata_Docomo_Logo.svg.png"></a></td>  
+        </tr>  
+        <tr> 
+            <td><a href="https://www.vodafone.com/"><img 
+src="https://images.indianexpress.com/2019/11/vodafone-759-1-1.jpg"></a></td>  
+            <td colspan="2" style="text-align: center; font-size: 30px;">Table With 
+Images</td>  
+            <td><a href="https://www.docomo.ne.jp/english/"><img 
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Tata_Docomo_Logo.svg/1
+ 200px-Tata_Docomo_Logo.svg.png"></a></td>  
+              
+</tr>  
+<tr>  
+<td><a href="https://www.vodafone.com/"><img 
+src="https://images.indianexpress.com/2019/11/vodafone-759-1-1.jpg"></a></td>  
+<td><a href="https://www.tata.com/business/tata-teleservices"><img
+
+Pranjal, [17-06-2025 23:44]
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/1200px
+Tata_logo.svg.png"></a></td>  
+<td><a href="https://www.airtel.in/"><img 
+src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Bharti_Airtel_Logo.svg"></a>
+ </td>  
+<td><a href="https://www.docomo.ne.jp/english/"><img 
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Tata_Docomo_Logo.svg/1
+ 200px-Tata_Docomo_Logo.svg.png"></a></td>  
+</tr>  
+</table>  
+</body>  
+</html>
+
+Pranjal, [17-06-2025 23:45]
+
+
+Pranjal, [17-06-2025 23:45]
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Image Map Example</title> 
+</head> 
+<body> 
+<img src="./bg2.png" usemap="#imagemap" style="width: 700px;"> 
+<map name="imagemap" id="imagemap"> 
+<!-- Example coordinates for clickable areas --> 
+<area shape="rect" coords="50,50,200,200" href="https://en.wikipedia.org/" 
+alt="Wikipedia"> 
+<area shape="rect" coords="250,50,400,200" href="https://www.google.com/" 
+alt="Example"> 
+<area shape="rect" coords="450,50,600,200" href="https://www.google.com/" 
+alt="Google"> 
+</map> 
+</body> 
+</html>
+
+Pranjal, [17-06-2025 23:46]
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Profile Page</title> 
+    <style> 
+        td { 
+            border: 1px solid black; 
+            padding: 10px; 
+            vertical-align: top; 
+        } 
+        a { 
+            color: green; 
+            text-decoration: none; 
+        } 
+        a:active { 
+            color: red; 
+        } 
+        a:visited { 
+            color: blue; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <table style="width: 800px;"> 
+        <tr> 
+            <td colspan="3" style="text-align: center;"> 
+                <h1>Your Name</h1> 
+                <p>Punch line etc.</p> 
+            </td> 
+        </tr> 
+        <tr> 
+            <td style="width: 20%;"> 
+                <ul style="list-style-type: none; padding: 0;"> 
+                    <li><a href="#objective" 
+onclick="showContent('Objective')">Objective</a></li> 
+                    <li><a href="#personal" onclick="showContent('Personal 
+Information')">Personal Information</a></li> 
+                    <li><a href="#family" onclick="showContent('Family 
+Information')">Family Information</a></li> 
+                    <li><a href="#education" onclick="showContent('Educational 
+Information')">Educational Information</a></li> 
+                    <li><a href="#experience" 
+onclick="showContent('Experience')">Experience</a></li> 
+                    <li><a href="#achievements" 
+onclick="showContent('Achievements')">Achievements</a></li> 
+                    <li><a href="#other" 
+onclick="showContent('Other')">Other</a></li> 
+                </ul> 
+            </td> 
+            <td style="width: 60%;" id="content"> 
+                <p>Display information here of selected link</p> 
+            </td> 
+            <td style="width: 20%;"> 
+                <p>Display relevant images here</p> 
+            </td> 
+        </tr> 
+        <tr> 
+            <td colspan="3" style="text-align: center;"> 
+                <p>Your contact details</p> 
+            </td> 
+        </tr> 
+    </table> 
+    <script> 
+        function showContent(content) { 
+            document.getElementById('content').innerHTML = '<p>' + content + '</p>'; 
+        } 
+    </script> 
+</body> 
+</html>
+
+Pranjal, [17-06-2025 23:46]
+
+
+Pranjal, [17-06-2025 23:46]
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Basic Information Form</title> 
+    <style> 
+        form { 
+            background-color: white; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+            width: 400px; 
+        } 
+        fieldset { 
+            border: 1px solid #ccc; 
+        } 
+        label { 
+            display: block; 
+            margin-top: 10px; 
+        } 
+        .form-buttons input { 
+            padding: 10px 20px; 
+            border: none; 
+            border-radius: 5px; 
+            background-color: #007BFF; 
+            color: white; 
+            cursor: pointer; 
+        } 
+        .form-buttons input[type="reset"] { 
+            background-color: #6c757d; 
+        } 
+        .form-buttons input:hover { 
+            opacity: 0.9; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <form action="your_action_page.php"> 
+        <fieldset> 
+            <legend>Basic Information</legend> 
+            <label for="nm">Full name:</label> 
+            <input type="text" id="nm" name="nm" required> 
+  
+            <label for="dob">Birth date:</label> 
+            <input type="date" id="dob" name="dob" required> 
+  
+            <label>Gender:</label> 
+            <label for="male"> 
+                <input type="radio" id="male" name="gender" value="male" required> 
+Male 
+            </label> 
+            <label for="female"> 
+                <input type="radio" id="female" name="gender" value="female" 
+required> Female 
+            </label> 
+  
+            <label for="address">Address:</label> 
+            <input type="text" id="address" name="address" required> 
+  
+            <label for="phno">Phone Number:</label> 
+            <input type="tel" id="phno" name="phno" pattern="[0-9]{10}" required> 
+        </fieldset> 
+  
+        <fieldset> 
+            <legend>Extra Information</legend> 
+            <label>Interest:</label> 
+            <label for="books"> 
+                <input type="checkbox" id="books" name="interest" value="books"> 
+Books 
+            </label> 
+            <label for="movies"> 
+                <input type="checkbox" id="movies" name="interest" value="movies"> 
+Movies 
+            </label> 
+            <label for="games"> 
+                <input type="checkbox" id="games" name="interest" value="games"> 
+Video games 
+            </label> 
+  
+            <label for="color">Favorite Color:</label> 
+            <select id="color" name="color" required> 
+                <option value="red">Red</option> 
+                <option value="green">Green</option> 
+                <option value="blue">Blue</option> 
+                <option value="yellow">Yellow</option> 
+                <option value="orange">Orange</option> 
+            </select> 
+        </fieldset> 
+  
+        <div class="form-buttons"> 
+<input type="submit" value="Send Data"> 
+<input type="reset" value="Reset Form"> 
+</div> 
+</form> 
+</body> 
+</html>
+
+Pranjal, [17-06-2025 23:46]
+
+
+Pranjal, [17-06-2025 23:47]
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <style>  
+        input, label, fieldset, button {  
+            margin: 10px;  
+        } 
+    </style>  
+</head>  
+<body>  
+    <fieldset style="width: 60vh;">  
+        <legend> Customer Profile Information </legend>  
+        <label for="fname">Full Name:</label>  
+        <input type="text" id="fname"> <br>  
+        <label for="address">Address:</label>  
+        <input type="text" id="address"> <br>  
+        <label for="phone">Phone Number:</label>  
+        <input type="tel" id="phone"><br>  
+        <label for="age">Age:</label>  
+        <input type="number" id="age"><br>  
+        <label for="gender" >Gender:</label>  
+        <input type="radio" name="gender">Male  
+        <input type="radio" name="gender">Female <br>  
+        <label for="rtype">Room Type:</label>  
+        <input type="radio" id="rtype">A/C  
+        <input type="radio" id="rtype">Non A/C  
+        <input type="radio" id="rtype">Deluxe <br>  
+        <label for="payment">Payment method:</label>  
+        <input type="checkbox" id="payment">Card  
+        <input type="checkbox" id="payment">Credit/Debit Card  
+        <input type="checkbox" id="payment">Coupons <br>  
+        <label for="amount">Amount:</label>  
+        <input type="number" name="amount" id="amount"> <br>  
+        <button type="submit">Submit</button>  
+    </fieldset>  
+</body>  
+</html>
+
+Pranjal, [18-06-2025 00:49]
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>css1</title>  
+    <style>  
+        a:link {  
+            color: rgb(247, 0, 41);  
+            text-decoration: none;  
+        }  
+        a:active {  
+            color: blue;  
+        }  
+        a:visited {  
+            color: green;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <p><a href="#link1">Link 1</a></p>  
+    <p><a href="#link2">Link 2</a></p>  
+    <p><a href="#link3">Link 3</a></p>  
+</body>  
+</html>
+
+Pranjal, [18-06-2025 01:50]
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title>JS1 </title>  
+</head>  
+<body>  
+<form onsubmit="validateCard()">  
+<label for="cardNumber">Enter your credit card number:</label><br>  
+<input type="text" id="cardNumber" name="cardNumber"><br>  
+<input type="submit" value="Validate">  
+</form>  
+<script>  
+function validateCard() {  
+var cardNumber = document.getElementById('cardNumber').value;  
+var cardType;  
+if ((/^5[1-5]/.test(cardNumber)) && (cardNumber.length == 16)) {  
+cardType = 'Master Card';  
+}   
+else if ((/^4/.test(cardNumber)) && (cardNumber.length == 13 || 
+cardNumber.length == 16)) {  
+cardType = 'Visa';  
+}   
+else if ((/^3[47]/.test(cardNumber)) && (cardNumber.length == 15)) {  
+cardType = 'American Express';  
+}   
+else {  
+alert('Invalid card number!');  
+return false;  
+}  
+alert('Valid ' + cardType + ' card number!');  
+}  
+</script>  
+</body>  
+</html>
+
+Pranjal, [18-06-2025 01:50]
+<html lang="en">  
+<body>  
+    <form onsubmit="return validateForm()">  
+        <label for="name">Name:</label><br>  
+        <input type="text" id="name" name="name"><br>  
+        <label for="email">Email:</label><br>  
+        <input type="text" id="email" name="email"><br>  
+        <label for="password">Password:</label><br>  
+        <input type="password" id="password" name="password"><br>  
+        <input type="submit" value="submit">  
+    </form>  
+    <script>  
+        function validateForm(){  
+            var name=document.getElementById("name").value;  
+            var email=document.getElementById("email").value;  
+            var password=document.getElementById("password").value;   
+            if(!/^[A-Za-z\s]+$/.test(name)){  
+                alert("Please enter a valid name"); false;  
+            }  
+            if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)) {  
+                alert('Invalid email! Please enter a valid email address.');  
+                return false;  
+            }  
+            if (!/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0
+9!@#$%^&*]{8,}$/.test(password)) {  
+                alert('Invalid password! Password should be at least 8 characters, 
+contain at least one number and one special character.');  return false;  
+            }  
+            alert('Form submitted successfully!'); return true;  
+        }  
+    </script>  
+</body>  
+</html>
+
+Pranjal, [18-06-2025 01:50]
+<html> 
+<head> 
+</head> 
+<body> 
+<h2>Enter the BirthDate</h2> 
+<input type="date" id="birthdate" /> 
+<button id="btn">Check the day</button> 
+<script> 
+const checkThDay = () => { 
+let inputDate = document.getElementById("birthdate").value; 
+let birthDate = new Date(inputDate); 
+const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", 
+"Thursday", "Friday", "Saturday"]; 
+const dayIdx = birthDate.getDay(); 
+alert("You were born on a " + weekdays[dayIdx]); 
+}; 
+let btn = document.getElementById("btn").addEventListener("click", 
+()=>{checkThDay();}); 
+</script> 
+</body> 
+</html>
+
+Pranjal, [18-06-2025 01:50]
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Self-Modifying Web Page</title> 
+</head> 
+<body> 
+    <h1 id="content">Initial Content</h1> 
+  
+    <script> 
+        // Function to modify the content 
+        function modifyContent() { 
+            var currentTime = new Date(); 
+            var hours = currentTime.getHours(); 
+            var minutes = currentTime.getMinutes(); 
+            var seconds = currentTime.getSeconds(); 
+            var newContent = "Current time: " + hours + ":" + minutes + ":" + 
+seconds; 
+            document.getElementById("content").innerText = newContent; 
+        } 
+  
+        // Call modifyContent function every minute 
+        setInterval(modifyContent, 60000); 
+    </script> 
+</body> 
+</html>
+
+Pranjal, [18-06-2025 01:51]
+<html> 
+    <head> 
+    </head> 
+    <body> 
+        <h2>Enter the BirthDate</h2> 
+        <input type="date" id="birthdate" /> 
+        <button id="btn">Check the day</button> 
+        <script> 
+            const checkThDay = () => { 
+                let inputDate = document.getElementById("birthdate").value; 
+                let birthDate = new Date(inputDate); 
+                const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", 
+"Thursday", "Friday", "Saturday"]; 
+                const dayIdx = birthDate.getDay(); 
+                 
+                alert("You were born on a " + weekdays[dayIdx]); 
+            }; 
+            let btn = document.getElementById("btn").addEventListener("click", 
+()=>{checkThDay();}); 
+        </script> 
+    </body> 
+</html>
+
+Pranjal, [18-06-2025 01:51]
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Phone Number Extractor</title> 
+</head> 
+<body> 
+    <h2>Phone Number Extractor</h2> 
+    <form id="phoneForm"> 
+        <label for="phoneNumber">Enter phone number (in the format (555)555
+5555):</label><br> 
+        <input type="text" id="phoneNumber" name="phoneNumber"><br><br> 
+        <label for="areaCode">Area Code:</label><br> 
+        <input type="text" id="areaCode" name="areaCode" readonly><br><br> 
+        <label for="lastFourDigits">Last Four Digits:</label><br> 
+        <input type="text" id="lastFourDigits" name="lastFourDigits" 
+readonly><br><br> 
+        <button type="button" onclick="extractPhoneInfo()">Extract Info</button> 
+    </form> 
+  
+    <script> 
+        function extractPhoneInfo() { 
+            var phoneNumber = document.getElementById("phoneNumber").value; 
+            var phoneTokens = phoneNumber.split(")"); 
+            var areaCode = phoneTokens[0].substring(1); 
+            var lastFourDigits = phoneTokens[1].split("-")[1]; 
+            document.getElementById("areaCode").value = areaCode; 
+            document.getElementById("lastFourDigits").value = lastFourDigits; 
+        } 
+    </script> 
+</body> 
+</html>
+
+Pranjal, [18-06-2025 01:52]
+<html> 
+<body> 
+<h2>Invert Image on Hover effect</h2> 
+<img id="image" src="https://img.freepik.com/free-photo/lone-tree_181624
+46361.jpg" alt="Image" height="300px" /> 
+</body> 
+<script> 
+let a = ()=>{ 
+let b = document.getElementById("image"); 
+b.style.filter= "invert()"; 
+} 
+a(); 
+</script> 
+</html>
+
+Pranjal, [18-06-2025 01:52]
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Scrolling Text in Status Bar</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            overflow: hidden; /* Hide horizontal scrollbar */ 
+        }  
+        .status-bar { 
+            position: fixed; 
+            bottom: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 20px; 
+            background-color: #f0f0f0; 
+            overflow: hidden; 
+        }  
+        .scrolling-text { 
+            display: inline-block; 
+            white-space: nowrap; 
+            animation: scrollText 10s linear infinite;  
+        } 
+ 
+        @keyframes scrollText { 
+            0% { 
+                transform: translateX(100%); 
+            } 
+            100% { 
+                transform: translateX(-100%); 
+            } 
+        } 
+    </style> 
+</head> 
+<body> 
+    <div class="status-bar"> 
+        <span class="scrolling-text">Welcome to our website. This is a scrolling text 
+message.</span> 
+    </div> 
+</body> 
+</html>
+
+Pranjal, [18-06-2025 01:53]
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <style>  
+        table, th, td {  
+            border: 1px solid black;  
+            border-collapse: collapse;  
+            padding: 5px;  
+            text-align: center;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <h1>Car Survey</h1>  
+    <label for="city">City:</label>  
+    <select id="city">  
+        <option value="Delhi">Delhi</option>  
+        <option value="Mumbai">Mumbai</option>  
+        <option value="Chennai">Chennai</option>  
+        <option value="Kolkata">Kolkata</option>  
+    </select>  
+    <br>  
+    <label for="model">Model:</label>  
+    <select id="model">  
+        <option value="K10">Maruti-K10</option>  
+        <option value="Zen-Astelo">Zen-Astelo</option>  
+        <option value="Wagnor">Wagnor</option>  
+        <option value="SX4">Maruti-SX4</option>  
+    </select>  
+    <br>  
+    <button onclick="submitSurvey()">Submit</button>  
+    <h2>Survey Results:</h2>  
+    <table id="results">  
+        <tr>  
+            <th>City</th>  
+            <th>Maruti-K10</th>  
+            <th>Zen-Astelo</th>  
+            <th>Wagnor</th>  
+            <th>Maruti-SX4</th>  
+        </tr>  
+    </table>  
+    <script>  
+        var surveyResults = {  
+            "Delhi": {"K10": 0, "Zen-Astelo": 0, "Wagnor": 0, "SX4": 0},  
+            "Mumbai": {"K10": 0, "Zen-Astelo": 0, "Wagnor": 0, "SX4": 0},  
+            "Chennai": {"K10": 0, "Zen-Astelo": 0, "Wagnor": 0, "SX4": 0},  
+            "Kolkata": {"K10": 0, "Zen-Astelo": 0, "Wagnor": 0, "SX4": 0}  
+        };  
+  
+        function submitSurvey() {  
+            var city = document.getElementById('city').value;  
+            var model = document.getElementById('model').value;  
+            surveyResults[city][model]++;  
+            displayResults();  
+        }  
+  
+        function displayResults() {  
+            var table = document.getElementById('results');  
+            table.innerHTML = '<tr><th>City</th><th>Maruti-K10</th><th>Zen
+Astelo</th><th>Wagnor</th><th>Maruti-SX4</th></tr>';  
+            for (var city in surveyResults) {  
+                var row = '<tr><td>' + city + '</td>';  
+                for (var model in surveyResults[city]) {  
+                    row += '<td>' + surveyResults[city][model] + '</td>';  
+                }  
+                row += '</tr>';  
+                table.innerHTML += row;  
+            }  
+        }  
+    </script>  
+</body>  
+</html>
+
+Pranjal, [18-06-2025 01:53]
+<?php  
+$cookie_name = "user";  
+$cookie_value = "Ayush";  
+setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");   
+if(!isset($_COOKIE["user"])) {  
+echo "Cookie is not set!";  
+} else {  
+echo "Cookie is set!<br>";  
+echo "Value is: " . $_COOKIE["user"];  
+}   
+?>
+
+Pranjal, [18-06-2025 01:54]
+<?php    
+session_start();  
+$_SESSION["name"] = "Ayush";  
+$_SESSION["rollno"] = "19";  
+echo "SESSION SET <br>";   
+echo "Name = " . $_SESSION["name"] . ".<br>";  
+echo "Roll No =  " . $_SESSION["rollno"] . ".";  
+?>
+
+Pranjal, [18-06-2025 01:55]
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Document</title>  
+</head>  
+<body>  
+    <form action="Php3.php" method="post">  
+        <label for="name"> Username:</label>  
+        <input type="text" name="name"><br>  
+        <label for="pass"> Password:</label>  
+        <input type="password" name="pass"><br>  
+        <input type="submit">  
+    </form>  
+</body>  
+</html>  
+  
+  
+  
+<?php  
+    $conn = new mysqli("localhost", "root", "", "login");  
+    if ($conn->connect_error) {  
+        die("Connection error: " . $conn->connect_error);  
+    }  
+  
+    $username = $_POST["name"];  
+    $password = $_POST["pass"];  
+    $sql = "SELECT * FROM student WHERE username='$username' AND 
+password='$password'";  
+    $result = $conn->query($sql);  
+    if ($result->num_rows > 0) {  
+        echo "Login Successful";  
+    } else {  
+        echo "Incorrect Username and Password";  
+    }  
+    $conn->close();  
+?>
+
+Pranjal, [18-06-2025 01:57]
+Index.js 
+import React from 'react';  
+import ReactDOM from 'react-dom/client';  
+import App from './App';  
+  
+const root = ReactDOM.createRoot(document.getElementById('root'));  
+root.render(  
+    <App name="Amrendra Bahubali"/>  
+); 
+  
+App.js  
+function App(a) {  
+  return (  
+    <h1>Hello {a.name}</h1>  
+  );  
+}  
+export default App;
+
+Pranjal, [18-06-2025 01:57]
+import React from "react"; 
+class Counter extends React.Component { 
+    constructor() { 
+        super(); 
+        this.state = { count: 0 }; 
+  
+    } 
+  
+    incrFunc = () => { 
+        this.setState({ count: this.state.count + 1 }); 
+    }; 
+    decrFunc = () => { 
+        if (this.state.count > 0) this.setState({ count: this.state.count - 1 }); 
+    }; 
+    render() { 
+        return ( 
+            <> 
+                <h1>{this.state.count}</h1> 
+                <button onClick={this.incrFunc}>Increment</button> 
+                <button onClick={this.decrFunc}>Decrement</button> 
+            </> 
+        ); 
+  
+    } 
+  
+} 
+  
+export default Counter;
+
+Pranjal, [18-06-2025 01:58]
+import React, { useState } from "react"; 
+function Form() { 
+    const [name, setName] = useState(""); 
+    const [email, setEmail] = useState(""); 
+    const [password, setPassword] = useState(""); 
+    return (<> 
+            <h1>Form</h1> 
+            <form> 
+                <label> 
+                    Name: 
+                    <input type="text" onChange={(e) => setName(e.target.value)} /> 
+                </label> 
+                <br /> 
+                <label> 
+                    Email: 
+                    <input type="text" onChange={(e) => setEmail(e.target.value)} /> 
+                </label> 
+                <br /> 
+                <label> 
+                    Password: 
+                    <input type="password" onChange={(e) => 
+setPasswordl(e.target.value)} /> 
+                </label> 
+                <br /> 
+                <button type="submit">Submit</button> 
+            </form> 
+            <p> 
+                {name === "" && email === "" ? (No Data Yet") : ( 
+                    <p> 
+                        Your Details are as per form: 
+                        <br /> 
+                        Name: {name} 
+                        <br /> 
+                        Email: {email} 
+                    </p> 
+                )} 
+            </p> 
+        </> 
+    );  
+} 
+export default Form;
+
+Pranjal, [18-06-2025 01:58]
+App.js 
+import React from "react"; 
+import { BrowserRouter, Routes, Route } from "react-router-dom"; 
+import About from "./About"; 
+import Blog from "./Blog"; 
+import Home from "./Home"; 
+import LinkToRoutes from "./LinkToRoutes"; 
+const App = () => { 
+    return (<> 
+            <BrowserRouter> 
+                <LinkToRoutes /> 
+                <Routes> 
+                    <Route path="/" element={<Home />} /> 
+                    <Route path="/blog" element={<Blog />} /> 
+                    <Route path="/about" element={<About />} /> 
+                </Routes> 
+            </BrowserRouter> 
+        </> 
+    ); 
+}; 
+export default App; 
+ 
+Home.js 
+import React from "react"; 
+export default function Home() { 
+    return ( 
+        <div> 
+            <h1>Home</h1> 
+        </div> 
+    ); 
+} 
+  
+Blog.js 
+import React from "react"; 
+export default function Blog() { 
+    return ( 
+        <> 
+            <h1>Blog</h1> 
+        </> 
+    ); 
+} 
+About.js 
+import React from "react"; 
+export default function About() { 
+    return ( 
+        <> 
+            <h1>About</h1> 
+        </> 
+    ); 
+  
+}
+
+Pranjal, [18-06-2025 02:55]
+table
+
+Pranjal, [18-06-2025 02:56]
+image table
+
+Pranjal, [18-06-2025 02:57]
+Create a web page with the following using HTML:  
+I. To embed an image map in a web page.  
+II. To fix the hot spots.  
+III. Show all the related information when the hot spots are clicked.
+
+Pranjal, [18-06-2025 02:58]
+table with hyperlink and info
+
+Pranjal, [18-06-2025 02:59]
+basic information form
+
+Pranjal, [18-06-2025 03:11]
+HOTEL Form
+
+Pranjal, [18-06-2025 03:11]
+color links
+
+Pranjal, [18-06-2025 03:21]
+card number validation
+
+Pranjal, [18-06-2025 03:33]
+java validate name password email
+
+Pranjal, [18-06-2025 03:33]
+Write a java script program to find day of Birthday.
+
+Pranjal, [18-06-2025 03:34]
+Design a web page that self-modifies itself after everyone minute.
+
+Pranjal, [18-06-2025 03:36]
+Write a code for web application, which accepts the birthdate from the user in a textbox and 
+display the day of the week in a message box at the click of a button.
+
+Pranjal, [18-06-2025 03:36]
+phone number extractor
+
+Pranjal, [18-06-2025 03:36]
+invert image hover
+
+Pranjal, [18-06-2025 03:39]
+Write an HTML Page to scroll the text message from right to left at the status bar of browser window.
+
+Pranjal, [18-06-2025 03:39]
+car table
+
+Pranjal, [18-06-2025 03:41]
+Create a program to write and retrieve cookie
+
+Pranjal, [18-06-2025 03:42]
+Create a web page to maintain session using PHP.
+
+Pranjal, [18-06-2025 03:44]
+Create a Login form having User-Id and Password fields. After submitting the form, match the user
+id and password with existing user-id and password. If the user-id and password match a new 
+welcome window should appear.
+
+Pranjal, [18-06-2025 03:47]
+. Create a functional component that accepts props and displays a personalized message.
+
+Pranjal, [18-06-2025 03:47]
+Create a class component that maintains a counter and provides buttons to increase and decrease 
+the counter.
+
+Pranjal, [18-06-2025 03:47]
+Create a component with a form that updates the state based on user input.
+
+Pranjal, [18-06-2025 03:47]
+Create a React application with multiple routes.
+
+Pranjal, [18-06-2025 04:02]
+Design the simple Calculator. 
+CODE: 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Simple Claci</title> 
+<style> 
+.container { 
+width: 350px; 
+height: 350px; 
+background: white; 
+border: 4px solid blue; 
+display: flex; 
+flex-direction: column; 
+justify-content: space-between; 
+padding: 20px; 
+text-align: center; 
+} 
+.details { 
+display: flex; 
+justify-content: space-between; 
+font-size: 14px; 
+font-weight: bold; 
+padding: 10px; 
+border-top: 2px solid black; 
+} 
+</style> 
+</head> 
+<body> 
+<div class="container"> 
+Enter the first num : <input type="number" id="first"><br><br> 
+Enter the second num : <input type="number" id="second"><br><br> 
+<button type="button" onclick="Validation()">Validate</button> 
+<select id="op"> 
+<option value="+">ADD</option> 
+<option value="-">SUB</option> 
+<option value="*">MUL</option> 
+<option value="/">DIV</option> 
+</select><br><br> 
+<p id="loc"></p> 
+</div> 
+<script> 
+function Validation(){ 
+var num1=document.getElementById('first').value; 
+var num2=document.getElementById('second').value; 
+var operator=document.getElementById('op').value; 
+if(operator=='+')   { 
+var res=Number(num1)+Number(num2); 
+document.getElementById('loc').innerHTML=res; 
+} 
+if(operator=='-'){ 
+var res=Number(num1)-Number(num2); 
+document.getElementById('loc').innerHTML=res;    
+} 
+if(operator=='*'){ 
+var res=Number(num1)*Number(num2); 
+document.getElementById('loc').innerHTML=res;   
+} 
+if(operator=='/')  { 
+var res=Number(num1)/Number(num2); 
+document.getElementById('loc').innerHTML=res;   
+} 
+} 
+</script> 
+</body> 
+</html>
+
+Pranjal, [18-06-2025 04:04]
+Create a PHP page to display all the records from PERS table that 
+contain Department Number(field name dno) similar to that of given in list 
+lstdnogiven in interface web browser Screen. 
+CODE: 
+<?php  
+$servername = "localhost";  
+$username = "root";  
+$password = "";  
+$dbname = "mysql";   
+$conn = new mysqli($servername, $username, $password, $dbname); if ($conn->connect_error) 
+{     die("Connection failed: " . $conn->connect_error);  
+}  
+$lstdnogiven = isset($_GET['lstdnogiven']) ? explode(',', $_GET['lstdnogiven']) : []; if 
+(!empty($lstdnogiven)) {  
+$placeholders = implode(',', array_fill(0, count($lstdnogiven), '?'));  
+$sql = "SELECT * FROM PERS WHERE dno IN ($placeholders)";  
+$stmt = $conn->prepare($sql);  
+$types = str_repeat('i', count($lstdnogiven));  
+$stmt->bind_param($types, ...$lstdnogiven);  
+$stmt->execute();  
+$result = $stmt->get_result();     if ($result->num_rows > 0) { 
+        echo "<table border='1'>";         
+echo "<tr><th>ID</th><th>Name</th><th>Department Number</th></tr>";         while ($row = 
+$result->fetch_assoc()) {
+             echo "<tr>";        
+htmlspecialchars($row['emp_id']) . "</td>";           
+     echo "<td>" . 
+  echo "<td>" . htmlspecialchars($row['name']) 
+. "</td>";             echo "<td>" . htmlspecialchars($row['dno']) . "</td>";  
+echo "</tr>";  
+}  
+echo "</table>";     
+}  
+} else {         echo "No records found.";  
+$stmt->close(); } else {     echo "No department numbers provided.";  
+}  
+$conn->close();  
+?>
+
+Pranjal, [18-06-2025 04:05]
+Write a PHP program to store page views count in SESSION, to 
+increment the count on each refresh, and to show the count on web page. 
+CODE: 
+<?php  
+session_start(); if 
+(isset($_SESSION['views'])) {  
+$_SESSION['views'] += 1;  
+} else {  
+$_SESSION['views'] = 1;  
+}  
+?>  
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title>Page View Counter</title>  
+</head>  
+<body>  
+<h1>Page View Counter</h1>  
+<p>You have viewed this page <strong><?php echo $_SESSION['views']; ?></strong> times in 
+this session.</p>  
+</body>  
+</html>
+
+Pranjal, [18-06-2025 04:05]
+Write a PHP program to store current date-time in a COOKIE and 
+display the "Last visited on date-time on the web page upon reopening of the 
+same page. 
+CODE: 
+<?php date_default_timezone_set('UTC'); if 
+(isset($_COOKIE['last_visit'])) {  
+$lastVisit = $_COOKIE['last_visit'];  
+} else {  
+$lastVisit = "This is your first visit!";  
+}  
+$currentDateTime = date("Y-m-d H:i:s"); setcookie("last_visit", 
+$currentDateTime, time() + (30 * 24 * 60 * 60));  
+?>  
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title>Last Visit Tracker</title>  
+</head>  
+<body>  
+<h1>Welcome Back</h1>  
+<p>
+         <?php        
+$lastVisit; }          
+ if ($lastVisit === "This is your first visit!") { echo 
+else { echo "Last visited on: <strong>" . $lastVisit . 
+"</strong>"; }  
+?>  
+</p>  
+</body>  
+</html>
+
+Pranjal, [18-06-2025 04:06]
+Using PHP and MySQL, develop a program to accept book information 
+viz. Accession number, title, authors, edition and publisher from a web page 
+and store the information in a database and to search for a book with the title 
+specified by the user and to display the search results with proper headings. 
+CODE: 
+index.html : 
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title>Book Entry & Search</title>  
+</head>  
+<body>  
+<h2>Enter Book Information</h2>  
+<form method="post" action="insert.php">  
+<label>Accession Number:</label><br>  
+<input type="number" name="accession_no" required><br><br>  
+<label>Title:</label><br>  
+<input type="text" name="title" required><br><br>  
+<label>Authors:</label><br>  
+<input type="text" name="authors" required><br><br>  
+<label>Edition:</label><br>  
+<input type="text" name="edition"><br><br>  
+<label>Publisher:</label><br>  
+<input type="text" name="publisher"><br><br>  
+<input type="submit" value="Add Book">  
+</form>  
+<h2>Search Book by Title</h2>  
+<form method="get" action="search.php">  
+<label>Title:</label><br>  
+<input type="text" name="title" required><br><br>  
+<input type="submit" value="Search">  
+</form>  
+</body>  
+</html>  
+insert.php:  
+<?php  
+$host = "localhost";  
+$user = "root";  
+$pass = "";   
+$dbname = "books_db";  
+$conn = new mysqli($host, $user, $pass, $dbname); if ($conn->connect_error) die("Connection 
+failed: " . $conn->connect_error);  
+$accession_no = $_POST['accession_no'];  
+$title = $_POST['title'];  
+$authors = $_POST['authors'];  
+$edition = $_POST['edition'];  
+$publisher = $_POST['publisher'];  
+$sql = "INSERT INTO books (accession_no, title, authors, edition, publisher)   
+VALUES (?, ?, ?, ?, ?)";  
+$stmt = $conn->prepare($sql);  
+$stmt->bind_param("issss", $accession_no, $title, $authors, $edition, $publisher); if ($stmt
+>execute()) {    
+ echo "Book added successfully!";  
+} else {     echo "Error: " . $stmt->error;  
+}  
+$stmt->close();  
+$conn->close();  
+?>  
+search.php:  
+<?php  
+$host = "localhost";  
+$user = "root";  
+$pass = "";  
+$dbname = "books_db";  
+$conn = new mysqli($host, $user, $pass, $dbname); if ($conn->connect_error) die("Connection 
+failed: " . $conn->connect_error);  
+$title = $_GET['title'];  
+$sql = "SELECT * FROM books WHERE title LIKE ?";  
+$stmt = $conn->prepare($sql);  
+$searchTitle = "%$title%";  
+$stmt->bind_param("s", $searchTitle);  
+$stmt->execute(); $result = $stmt->get_result(); if ($result->num_rows > 0) {     echo 
+"<h2>Search Results:</h2>";     echo "<table border='1'>  
+<tr>  
+<th>Accession No</th>  
+<th>Title</th>  
+<th>Authors</th>  
+<th>Edition</th>  
+<th>Publisher</th>  
+</tr>";  
+while ($row = $result->fetch_assoc()) {    
+<td>{$row['accession_no']}</td>  
+<td>{$row['title']}</td>  
+     echo "<tr>  
+<td>{$row['authors']}</td>  
+<td>{$row['edition']}</td>  
+<td>{$row['publisher']}</td>  
+</tr>";  
+}  
+echo "</table>"; } else {     echo "No books found with the title '$title'.";  
+}  
+$stmt->close();  
+$conn->close();  
+?>
+
+Pranjal, [18-06-2025 04:23]
+1. JavaScript – Regex Validation (User Input: Email & Phone)
+📄 regex-validation.html
+html
+Copy
+Edit
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Regex Validation</h2>
+<form onsubmit="return validate()">
+  <input type="text" id="email" placeholder="Enter Email"><br><br>
+  <input type="text" id="phone" placeholder="Enter Phone Number"><br><br>
+  <button>Validate</button>
+</form>
+<p id="result"></p>
+
+<script>
+function validate() {
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const phoneValid = /^\d{10}$/.test(phone);
+  const result = document.getElementById("result");
+
+  if (emailValid && phoneValid) {
+    result.textContent = "✅ Valid Email and Phone!";
+    return false;
+  } else {
+    result.textContent = "❌ Invalid Email or Phone.";
+    return false;
+  }
+}
+</script>
+</body>
+</html>
+—————————————————————————————————-
+✅ 2. JavaScript – Form Validation (User Input: Name & Age)
+📄 form-validation.html
+html
+Copy
+Edit
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Form Validation</h2>
+<form onsubmit="return validateForm()">
+  <input id="name" placeholder="Name"><br><br>
+  <input id="age" type="number" placeholder="Age"><br><br>
+  <button>Submit</button>
+</form>
+<p id="status"></p>
+
+<script>
+function validateForm() {
+  const name = document.getElementById("name").value.trim();
+  const age = document.getElementById("age").value.trim();
+  const status = document.getElementById("status");
+
+  if (!name || !age) {
+    status.textContent = "❌ Please fill all fields.";
+  } else {
+    status.textContent = ✅ Hello ${name}, age ${age}.;
+  }
+  return false;
+}
+</script>
+</body>
+</html>
+—————————————————————————————————-
+✅ 3. PHP – Session (User Enters Name, Session Tracks)
+📄 session.php
+php
+Copy
+Edit
+<?php
+session_start();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['username'] = $_POST['name'];
+}
+?>
+
+<form method="POST">
+  <input name="name" placeholder="Enter your name">
+  <button>Start Session</button>
+</form>
+
+<?php
+if (isset($_SESSION['username'])) {
+    echo "Welcome, " . htmlspecialchars($_SESSION['username']);
+}
+?>
+—————————————————————————————————-
+✅ 4. PHP – Cookie (User Inputs Name, Set as Cookie)
+📄 cookie.php
+php
+Copy
+Edit
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    setcookie("user", $_POST['name'], time() + 3600);
+}
+?>
+
+<form method="POST">
+  <input name="name" placeholder="Enter your name">
+  <button>Set Cookie</button>
+</form>
+
+<?php
+if (isset($_COOKIE['user'])) {
+    echo "Hello, " . htmlspecialchars($_COOKIE['user']);
+}
+?>
+—————————————————————————————————-
+✅ 5. PHP – Database Insert (User Inputs Name & Email)
+📄 db-form.php
+php
+Copy
+Edit
+<?php
+$conn = new mysqli("localhost", "root", "", "testdb");
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $conn->real_escape_string($_POST['name']);
+    $email = $conn->real_escape_string($_POST['email']);
+    $conn->query("INSERT INTO users (name, email) VALUES ('$name', '$email')");
+}
+?>
+
+<form method="POST">
+  <input name="name" placeholder="Name"><br>
+  <input name="email" placeholder="Email"><br>
+  <button>Submit</button>
+</form>
+✅ Database Setup:
+
+sql
+Copy
+Edit
+CREATE DATABASE testdb;
+USE testdb;
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100)
+);
+—————————————————————————————————-
+✅ 6. React – Dynamic Counter
+📁 src/components/Counter.js
+jsx
+Copy
+Edit
+import { useState } from 'react';
+
+export default function Counter() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <h2>Count: {count}</h2>
+      <button onClick={() => setCount(count + 1)}>+</button>
+      <button onClick={() => setCount(count - 1)}>-</button>
+      <button onClick={() => setCount(0)}>Reset</button>
+    </div>
+  );
+}
+—————————————————————————————————-
+✅ 7. React – Live Clock
+📁 src/components/Clock.js
+jsx
+Copy
+Edit
+import { useEffect, useState } from 'react';
+
+Pranjal, [18-06-2025 04:23]
+export default function Clock() {
+  const [time, setTime] = useState(new Date().toLocaleTimeString());
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(new Date().toLocaleTimeString());
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+  return <h2>Time: {time}</h2>;
+}
+—————————————————————————————————-
+✅ 8. React – Dynamic Date Display
+📁 src/components/DateDisplay.js
+jsx
+Copy
+Edit
+export default function DateDisplay() {
+  return <h2>Date: {new Date().toLocaleDateString()}</h2>;
+}
+—————————————————————————————————-
+🧩 React App Setup
+📁 Folder Structure
+css
+Copy
+Edit
+react-app/
+├── src/
+│   ├── App.js
+│   ├── index.js
+│   └── components/
+│       ├── Counter.js
+│       ├── Clock.js
+│       └── DateDisplay.js
+📄 App.js
+jsx
+Copy
+Edit
+—————————————————————————————————-
+import Counter from './components/Counter';
+import Clock from './components/Clock';
+import DateDisplay from './components/DateDisplay';
+
+function App() {
+  return (
+    <div>
+      <h1>React App</h1>
+      <Counter />
+      <Clock />
+      <DateDisplay />
+    </div>
+  );
+}
+
+export default App;
+
+Pranjal, [18-06-2025 04:28]
+React Installation & Run Steps
+Install Node.js from https://nodejs.org
+
+Create React App
+
+bash
+Copy
+Edit
+npx create-react-app react-app
+cd react-app
+Add Component Files to src/components/
+
+Run App
+
+bash
+Copy
+Edit
+npm start
+🐘 PHP + MySQL via XAMPP (For All PHP Examples)
+Install XAMPP from https://www.apachefriends.org
+
+Start Apache and MySQL
+
+Place files in:
+
+makefile
+Copy
+Edit
+C:\xampp\htdocs\your-folder\
+Access in browser:
+
+arduino
+Copy
+Edit
+http://localhost/your-folder/session.php
+http://localhost/your-folder/cookie.php
+http://localhost/your-folder/db-form.php
+
+Pranjal, [18-06-2025 04:32]
+JavaScript – Lab Manual Functions
+📄 functions-demo.html
+html
+Copy
+Edit
+<!DOCTYPE html>
+<html>
+<head><title>JavaScript Functions</title></head>
+<body>
+<h2>JavaScript Functions</h2>
+<p id="output"></p>
+
+<script>
+// 1. Function Declaration
+function greet(name) {
+  return Hello, ${name};
+}
+
+// 2. Function Expression
+const square = function(n) {
+  return Square of ${n} is ${n * n};
+};
+
+// 3. Arrow Function
+const cube = n => Cube of ${n} is ${n ** 3};
+
+// Using values entered by user
+let name = prompt("Enter your name:");
+let num = prompt("Enter a number:");
+
+document.getElementById("output").innerHTML = `
+  ${greet(name)}<br>
+  ${square(num)}<br>
+  ${cube(num)}
+`;
+</script>
+</body>
+</html>
+✅ PHP – $_GET Program
+📄 get-form.html
+html
+Copy
+Edit
+<!DOCTYPE html>
+<html>
+<head><title>PHP GET Example</title></head>
+<body>
+<h2>Send Data Using GET</h2>
+<form action="get-example.php" method="get">
+  Name: <input type="text" name="name"><br><br>
+  <input type="submit" value="Send">
+</form>
+</body>
+</html>
+📄 get-example.php
+php
+Copy
+Edit
+<?php
+if (isset($_GET['name'])) {
+    $name = htmlspecialchars($_GET['name']);
+    echo "Welcome, $name!";
+} else {
+    echo "No data received.";
+}
+?>
+✅ React – Props Example
+📁 src/components/Greeting.js
+jsx
+Copy
+Edit
+export default function Greeting({ name }) {
+  return <h2>Hello, {name}!</h2>;
+}
+📄 App.js
+jsx
+Copy
+Edit
+import Greeting from './components/Greeting';
+
+function App() {
+  return (
+    <div>
+      <Greeting name="React Student" />
+    </div>
+  );
+}
+
+export default App;
+✅ React – Class Component Counter
+📁 src/components/ClassCounter.js
+jsx
+Copy
+Edit
+import React, { Component } from 'react';
+
+class ClassCounter extends Component {
+  state = { count: 0 };
+
+  render() {
+    return (
+      <div>
+        <h2>Class Counter: {this.state.count}</h2>
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>+</button>
+        <button onClick={() => this.setState({ count: this.state.count - 1 })}>-</button>
+      </div>
+    );
+  }
+}
+
+export default ClassCounter;
+📄 App.js
+jsx
+Copy
+Edit
+import ClassCounter from './components/ClassCounter';
+
+function App() {
+  return (
+    <div>
+      <ClassCounter />
+    </div>
+  );
+}
+
+export default App;
+✅ React – Form Input/Output
+📁 src/components/UserForm.js
+jsx
+Copy
+Edit
+import { useState } from 'react';
+
+export default function UserForm() {
+  const [name, setName] = useState('');
+  const [greet, setGreet] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setGreet(Welcome, ${name});
+  };
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your Name" />
+        <button type="submit">Submit</button>
+      </form>
+      {greet && <p>{greet}</p>}
+    </div>
+  );
+}
+📄 App.js
+jsx
+Copy
+Edit
+import UserForm from './components/UserForm';
+
+function App() {
+  return (
+    <div>
+      <UserForm />
+    </div>
+  );
+}
+
+export default App;
+📁 React Folder Structure (Summary)
+css
+Copy
+Edit
+react-app/
+├── src/
+│   ├── App.js
+│   ├── index.js
+│   └── components/
+│       ├── Greeting.js
+│       ├── ClassCounter.js
+│       └── UserForm.js
+
+Pranjal, [18-06-2025 04:32]
+html
+
+Pranjal, [18-06-2025 04:33]
+java
+
+Pranjal, [18-06-2025 04:33]
+php
+
+Pranjal, [18-06-2025 04:33]
+calculator
+
+Pranjal, [18-06-2025 04:34]
+php+sql display record form PERS table
+
+Pranjal, [18-06-2025 04:34]
+php store page views session
+
+Pranjal, [18-06-2025 04:34]
+php to store data time in cookie
+
+Pranjal, [18-06-2025 04:34]
+php +sql book information
+
+Pranjal, [18-06-2025 04:36]
+regx validation
+from validation
+php session (User Enters Name, Session Tracks)
+PHP – Cookie (User Inputs Name, Set as Cookie)
+PHP – Database Insert (User Inputs Name & Email)
+ React – Dynamic Counter
+ React – Live Clock
+ React – Dynamic Date Display
+
+Pranjal, [18-06-2025 04:36]
+installation run
+
+Pranjal, [18-06-2025 04:38]
+greet,square,cube
+PHP $_GET 
+React – Props Example
+React – Class Component Counter
+React – Form Input/Output
